@@ -47,10 +47,9 @@ document.write (d.toLocaleString());
 </pre><br>
 <h2>Semester-Wise Performance</h2>
 <div class="form-group" >
-<h3>  <label for="sel1">Select Semester:</label></h3>
-<center>  <select class="form-control" id="sel1" style=" width:15%; font-size:150%" >
-  <center>
-    <option id="sem1" onclick="toggle();">Semester 1</option>
+<center>  <select class="form-control" id="sel1" style=" width:15%; font-size:150%">
+    <option disabled="disabled" selected="selected">Select Semester</option>
+    <option id="sem1" onclick="toggle()">Semester 1</option>
     <option id="sem2" onclick="toggle();">Semester 2</option>
     <option id="sem3" onclick="toggle();">Semester 3</option>
     <option id="sem4" onclick="toggle();">Semester 4</option>
@@ -60,3 +59,14 @@ document.write (d.toLocaleString());
     <option id="sem8" onclick="toggle();">Semester 8</option>
   </select></center>
 </div>
+
+<table id="s1" align="center" style="display:none">
+  <tr>
+    <td>hello</td>
+  </tr>
+</table>
+<script>
+function toggle() {
+    alert("called");
+}
+</script>
