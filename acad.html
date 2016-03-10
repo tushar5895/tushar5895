@@ -8,6 +8,51 @@
   <link rel="stylesheet" href="bootstrap.min.css">
   <script src="jquery.js"></script>
   <script src="bootstrap.min.js"></script>
+<script>
+$(document).ready(function(){
+  $('.sem1grade').hide();
+  $('.sem2grade').hide();
+  $('.sem3grade').hide();
+$('.form-control').change(function() {
+  if ($(this).val() == 1) {
+    $('.sem1grade').show();
+    $('.sem2grade').hide();
+    $('.sem3grade').hide();
+  } else if ($(this).val() == 2) {
+    $('.sem3grade').hide();
+    $('.sem1grade').hide();
+    $('.sem2grade').show();
+  }
+  else if ($(this).val() == 3) {
+    $('.sem1grade').hide();
+    $('.sem2grade').hide();
+    $('.sem3grade').show();
+  }
+  else if ($(this).val() == 4) {
+    $('.sem1grade').hide();
+    $('.sem2grade').hide();
+    $('.sem3grade').hide();
+    alert("Current Semester. Result not published yet.")
+  }
+  else {
+    $('.sem1grade').hide();
+    $('.sem2grade').hide();
+    $('.sem3grade').hide();
+    alert("Upcoming Semester")
+  }
+});
+});
+</script>
+<style>
+table, th, td {
+    border: 1px solid white;
+    text-align: center;
+    font-family: sans-serif;
+}
+th {
+  font-size: 150%;
+}
+</style>
 </head>
 <body style="background-color:black;color:white;text-align:center;">
   <nav class="navbar navbar-inverse">
@@ -46,27 +91,129 @@ document.write (d.toLocaleString());
 </script>): 8.62</h2>
 </pre><br>
 <h2>Semester-Wise Performance</h2>
-<div class="form-group" >
-<center>  <select class="form-control" id="sel1" style=" width:15%; font-size:150%">
-    <option disabled="disabled" selected="selected">Select Semester</option>
-    <option id="sem1" onclick="toggle()">Semester 1</option>
-    <option id="sem2" onclick="toggle();">Semester 2</option>
-    <option id="sem3" onclick="toggle();">Semester 3</option>
-    <option id="sem4" onclick="toggle();">Semester 4</option>
-    <option id="sem5" onclick="toggle();">Semester 5</option>
-    <option id="sem6" onclick="toggle();">Semester 6</option>
-    <option id="sem7" onclick="toggle();">Semester 7</option>
-    <option id="sem8" onclick="toggle();">Semester 8</option>
-  </select></center>
-</div>
 
-<table id="s1" align="center" style="display:none">
-  <tr>
-    <td>hello</td>
-  </tr>
-</table>
-<script>
-function toggle() {
-    alert("called");
-}
-</script>
+<center>  <select class="form-control" id="sel" style=" width:210px; font-size:150%">
+    <option disabled="disabled" selected="selected">Select Semester</option>
+    <option value="1">Semester 1</option>
+    <option value="2">Semester 2</option>
+    <option value="3">Semester 3</option>
+    <option value="4">Semester 4</option>
+    <option value="5">Semester 5</option>
+    <option value="6">Semester 6</option>
+    <option value="7">Semester 7</option>
+    <option value="8">Semester 8</option>
+  </select></center>
+
+<div class="sem1grade">
+  <br>
+  <table style="width:33%; text-align:center" align="center">
+    <tr>
+      <th>Course</th>
+        <th>Grade</th>
+      </tr>
+    <tr>
+      <td>Problem Solving Using C</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Multivariable Calculus and Differential Equations</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Basic Electrical and Electronics Engineering</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Engineering Chemistry</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Information Technology Fundamentals</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td style="font-size:120%">GPA</th>
+      <td>8.42<td>
+  </table>
+</div>
+<div class="sem2grade">
+  <br>
+  <table style="width:33%; text-align:center" align="center">
+    <tr>
+      <th>Course</th>
+        <th>Grade</th>
+      </tr>
+    <tr>
+      <td>Digital Electronics and Microprocessors (Theory)</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Digital Electronics and Microprocessor (Lab)</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td>Modern Physics</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Differntial and Difference Equation</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Environmental Studies</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Object Oriented Programming in C++ (Theory)</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Object Oriented Programming in C++ (Lab)</td>
+      <td>S</td>
+    </tr>
+    <tr>
+      <td style="font-size:120%">GPA</th>
+      <td>9.04<td>
+  </table>
+</div>
+<div class="sem3grade">
+  <br>
+  <table style="width:33%; text-align:center" align="center">
+    <tr>
+      <th>Course</th>
+        <th>Grade</th>
+      </tr>
+    <tr>
+      <td>Human Computer Interaction</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Computer Architecture and Organization</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Programming in Java</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Discrete Mathematical Structures</td>
+      <td>A</td>
+    </tr>
+    <tr>
+      <td>Data Structures and Algorithms (Theory)</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Data Structures and Algorithms (Lab)</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td>Basic French</td>
+      <td>B</td>
+    </tr>
+    <tr>
+      <td style="font-size:120%">GPA</th>
+      <td>8.55<td>
+  </table>
+
+</div>
